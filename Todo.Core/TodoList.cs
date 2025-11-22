@@ -1,4 +1,8 @@
-﻿using System;
+﻿// <copyright file="TodoList.cs" company="NATK">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,8 +30,7 @@ namespace Todo.Core
         public IEnumerable<TodoItem> Find(string substring)
         {
             return this.items.Where(i =>
-                i.Title.Contains(substring ?? string.Empty,
-StringComparison.OrdinalIgnoreCase));
+                i.Title.Contains(substring ?? string.Empty, StringComparison.OrdinalIgnoreCase));
         }
 
         public int Count => this.items.Count;
